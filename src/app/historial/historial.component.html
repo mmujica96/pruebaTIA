@@ -1,0 +1,34 @@
+<div class="center" summary="Historial de Token por Cliente">
+    <table class="table table-bordered">
+        <thead >
+            <tr>
+                <th scope="col"> ID</th>
+                <th scope="col">Identificacion</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Token</th>
+                <th scope="col">Fecha Inicio</th>
+                <th scope="col">Fecha Fin</th>
+                <th scope="col">Estado</th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor="let items of historial">
+            <tr>
+                <td><b>{{items['id']}}</b></td>
+                <td >{{items['identification']}}</td>
+                <td >{{items['firstname']}} {{items['lastname']}}</td>
+                <td >{{items['otpToken']}}</td>
+                <td >{{items['createdate']}}</td>
+                <td >{{items['expireddate']}}</td>
+                <td >{{items['transaction']}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Número total de álbumes</th>
+              <td colspan="2">{{historial.length}}</td>
+            </tr>
+          </tfoot>
+
+    </table>
+</div>
